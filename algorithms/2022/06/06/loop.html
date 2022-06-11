@@ -155,11 +155,11 @@ window.onload = wrap_img;
 <p>Infinite Loop is a very simple, relaxing and never ending game for iPhone, iPad and Android. Your goal is to turn all forms on the grid so that there would be no open connections. Most levels are algorithmically generated and randomly colored, and after successfully completing each level you will be rewarded with a beautiful design of your own making.</p>
 </blockquote>
 <p>Jonas is not wrong. The game is relaxing but also addictive.</p>
-<p><img src="/blog/images/copied_from_nb/game_demo.gif" alt="" title="Infinite Loop, 2015"></p>
+<p><img src="/devblog/images/copied_from_nb/game_demo.gif" alt="" title="Infinite Loop, 2015"></p>
 <p><img src="http://www.alproductions.us/Loops_Of_Zen/Loops_Of_Zen/instructions_files/Screenshot%202008-10-16%2021%3A31%3A07%20-0700-1.png" alt="" title="Blast from the Past, Loops of Zen, 2008">
 My girlfriend at the time was obsessed with the game. Before I knew it she was more than a thousand levels into the game. As a young undergraduate, I was competitive. To a fault. I had to find a way to play the game without playing the game. If I was going to hit level 1000, I needed to game the game. I spent about a month of actual work trying to figure out a backtracking algorithm to solve the board position and then figuring out how to <a href="https://github.com/dtmilano/AndroidViewClient">connect</a> the python script to my phone. Unfortunately an algorithm bug and life in general made me forget about the game and hitting level 1000.</p>
 <p>It's 2022 now and I think it is high time I had a blog with an interesting post or two. This spring I took <a href="https://web.archive.org/web/20220505222756/https://shelat.khoury.neu.edu/22s-5800/">CS5800, Introduction to Algorithms</a> by Dr. Abhi Shelat. Towards the end of the course we were introduced to the applications of <a href="https://en.wikipedia.org/wiki/Maximum_flow_problem">Maximum Flow</a> algorithms. I had an intense sense of deja vu when I read what was on <a href="https://web.archive.org/web/20220505222543/https://shelat.khoury.neu.edu/22s-5800/h10/">Homework 10</a>. Matching things adjacent to each other. Tiling dominoes on a grid.</p>
-<p><img src="/blog/images/copied_from_nb/./bob-grid.png" alt="" title="Bob on Grid"></p>
+<p><img src="/devblog/images/copied_from_nb/./bob-grid.png" alt="" title="Bob on Grid"></p>
 <p>This Summer, I decided to give Solving Infinite Loop another shot. In Part 1 of this series, we will use basic image processing to get game tiles from a screenshot and explore algorithms to solve the game. In Part 2 , We will use some basic computer vision to make a more robust image to game tile converter. Let's begin!</p>
 
 </div>
@@ -171,9 +171,9 @@ My girlfriend at the time was obsessed with the game. Before I knew it she was m
 <h1 id="Introduction">
 <a class="anchor" href="#Introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction<a class="anchor-link" href="#Introduction"> </a>
 </h1>
-<p><img src="/blog/images/copied_from_nb/./tiles.png" alt="" title="Tiles with the number of outgoing edges"></p>
+<p><img src="/devblog/images/copied_from_nb/./tiles.png" alt="" title="Tiles with the number of outgoing edges"></p>
 <p>An arbitray level of Infinite Loop is composed of a rectangular <strong>grid</strong> (Rows and Columns, 2D Array/List) of <strong>tiles</strong>. We have 5 types of tiles with different a different number of outgoing edges (the degree of a tile). For tiles with degree 2, there are 2 types of tiles possible. Each tile can of course be rotated along its center. Different tiles have different number of possible rotations.</p>
-<p><img src="/blog/images/copied_from_nb/./rotations.png" alt="" title="Rotations of a tile"></p>
+<p><img src="/devblog/images/copied_from_nb/./rotations.png" alt="" title="Rotations of a tile"></p>
 <p>Let us try to define a couple of helper functions to make our lives easier. We will first define a function that will list out all the possible rotations of a tile. We represent each tile with a 4 bit binary number going clockwise. A tile of degree 1 with its edge pointing up is represented as <code>1000</code>. The different rotations of this tile are obtained by left or right shifting the number till we get the original number. For <code>1000</code>, we get <code>1000</code>, <code>0001</code>, <code>0010</code> and <code>0100</code>.</p>
 
 </div>
@@ -241,7 +241,7 @@ My girlfriend at the time was obsessed with the game. Before I knew it she was m
 <a class="anchor" href="#Getting-Tiles-from-an-Image" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Tiles from an Image<a class="anchor-link" href="#Getting-Tiles-from-an-Image"> </a>
 </h1>
 <p>Onto extracting tiles from an image. For an image of a game level, we want a 2D array of tiles. Let us look at a screenshot.</p>
-<p><img src="/blog/images/copied_from_nb/./arbitray_level_2.png" alt="" title="Screenshot of level"></p>
+<p><img src="/devblog/images/copied_from_nb/./arbitray_level_2.png" alt="" title="Screenshot of level"></p>
 <p>This level is a 4x4 grid. Each tile is square of the same side length. There are three colors in the image. A background color, a tile color and a faint line color used for the UI icon. We can say for cetrain that the most frequent color in the image is the backround color and most non trivial game levels have more pixels of the tile color than the UI icon color. We will define a function that takes as input an image path and returns a black and white image with only the tile color colored white and the background color black.</p>
 
 </div>
@@ -1301,7 +1301,7 @@ Degree :  1
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="/blog/images/copied_from_nb/./out.gif" alt="" title="Animation of the algorithm"></p>
+<p><img src="/devblog/images/copied_from_nb/./out.gif" alt="" title="Animation of the algorithm"></p>
 
 </div>
 </div>
@@ -1517,7 +1517,7 @@ Degree :  1
 <a class="anchor" href="#What-is-a-Maximum-Bipartite-Matching?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is a Maximum Bipartite Matching?<a class="anchor-link" href="#What-is-a-Maximum-Bipartite-Matching?"> </a>
 </h2>
 <p>A Bipartite matching is a set of edges from one source set of vertices to another target set of vertices such that no two edges share the same source vertex and no two edges share the same target vertex. This means each item in the source set is matched to exactly one item in the target set. A maximum bipartite matching is a bipartite matching with the maximum number of edges. Meaning if we add a new edge to the matching it will cease to be a bipartite matching.</p>
-<p><img src="/blog/images/copied_from_nb/maxbipartitematching.png" alt="" title="Maximum Bipartite Matching for two sets of vertices. The edges highlighted red are a maximum matching."></p>
+<p><img src="/devblog/images/copied_from_nb/maxbipartitematching.png" alt="" title="Maximum Bipartite Matching for two sets of vertices. The edges highlighted red are a maximum matching."></p>
 <p><a href="https://commons.wikimedia.org/wiki/File:BipartiteFirstWiki.png">source</a></p>
 
 </div>
@@ -1744,7 +1744,7 @@ Degree :  1
 <li>The sum of flows going out of <code>s</code> must equal the sum of flows going into <code>t</code>.</li>
 <li>The flow going through an edge must be less than or equal to the capacity of that edge.</li>
 </ol>
-<p><img src="/blog/images/copied_from_nb/maxflow.png" alt="" title="Maximum Network Flow Graph, the numerator is the flow going through an edge and the denominator is the capacity of that edge."></p>
+<p><img src="/devblog/images/copied_from_nb/maxflow.png" alt="" title="Maximum Network Flow Graph, the numerator is the flow going through an edge and the denominator is the capacity of that edge."></p>
 <p><a href="https://commons.wikimedia.org/wiki/File:Max_flow.svg">source</a></p>
 
 </div>
@@ -1757,7 +1757,7 @@ Degree :  1
 <a class="anchor" href="#Bipartite-Matching-to-max-Network-Flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bipartite Matching to max Network Flow<a class="anchor-link" href="#Bipartite-Matching-to-max-Network-Flow"> </a>
 </h2>
 <p>To convert a bipartite matching problem to a max network flow problem we add a new vertex <code>s</code> and a new vertex <code>t</code> to the graph. We then add an edge from <code>s</code> to each of the vertices in the source set and an edge from each of the vertices in the target set to <code>t</code>. We then add edges between vertices in the source set and adjacent vertices in the target set. Once we solve for the max network flow, we can recover the bipartite matching that results in the max network flow.</p>
-<p><img src="/blog/images/copied_from_nb/./max2nflow.png" alt="" title="Introduction to Algorithms 3rd Ed Page. 733 Fig 26.8"></p>
+<p><img src="/devblog/images/copied_from_nb/./max2nflow.png" alt="" title="Introduction to Algorithms 3rd Ed Page. 733 Fig 26.8"></p>
 <p>So all we need to so is add a source and sink to our directed graph.</p>
 
 </div>
@@ -1897,7 +1897,7 @@ Degree :  1
 <p>The Exact Cover Problem can be stated simply as follows:</p>
 <p>"Given a set of subsets of a set of elements X, find a subset of the set such that each element in X is in exactly one subset selected."</p>
 <p>For example<sup class="footnote-ref" id="fnref-1"><a href="#fn-1">1</a></sup>, Consider a set <strong>X</strong> = <code>{A,B,C,D}</code> and a set of subsets <strong>S</strong> = <code>[{A,C}, {B,C}, {B,D}]</code> then <code>[{A,C} , {B,D}]</code> is an exact cover of <strong>X</strong>. We can also visualize this as a bit matrix where each row represents a subset and each column represents an element in <strong>X</strong>. Finding an exact cover would be equivalent to finding a set of rows such that each column has only one bit.</p>
-<p><img src="/blog/images/copied_from_nb/./bitwisecover.png" alt="" title="Bitwise representation of above exact cover problem"></p>
+<p><img src="/devblog/images/copied_from_nb/./bitwisecover.png" alt="" title="Bitwise representation of above exact cover problem"></p>
 <div class="footnotes">
 <hr>
 <ol>
