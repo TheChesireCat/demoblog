@@ -4,6 +4,7 @@ layout: post
 description: A minimal example of using markdown with fastpages.
 categories: [markdown]
 title: An Example Markdown Post
+hide: true
 ---
 # Example Markdown Post
 
@@ -87,7 +88,7 @@ key: value
 
 | Column 1 | Column 2 |
 |-|-|
-| A thing | Another thing |
+| A thing | Another thing thing |
 
 
 ## Tweetcards
