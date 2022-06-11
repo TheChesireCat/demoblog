@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://thechesirecat.github.io/blog/algorithms/2022/06/06/loop.html</loc>
+<loc>https://thechesirecat.github.io/demoblog/algorithms/2022/06/06/loop.html</loc>
 <lastmod>2022-06-06T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://thechesirecat.github.io/blog/about/</loc>
+<loc>https://thechesirecat.github.io/demoblog/about/</loc>
 </url>
 <url>
-<loc>https://thechesirecat.github.io/blog/</loc>
+<loc>https://thechesirecat.github.io/demoblog/</loc>
 </url>
 <url>
-<loc>https://thechesirecat.github.io/blog/search/</loc>
+<loc>https://thechesirecat.github.io/demoblog/search/</loc>
 </url>
 <url>
-<loc>https://thechesirecat.github.io/blog/categories/</loc>
+<loc>https://thechesirecat.github.io/demoblog/categories/</loc>
 </url>
 </urlset>
