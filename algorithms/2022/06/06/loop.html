@@ -148,7 +148,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#AlgorithmX">AlgorithmX </a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h1"><a href="#Pifalls-and-Future-Work">Pifalls and Future Work </a></li>
+<li class="toc-entry toc-h1"><a href="#Pitfalls-and-Future-Work">Pitfalls and Future Work </a></li>
 </ul>
 <!--
 #################################################
@@ -381,7 +381,7 @@ My girlfriend at the time was obsessed with the game. Before I knew it she was m
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Thanks to the black background we can find the bounding box of the game. <code>PIL</code> has a handy function <code>getbbox</code> that returns the bounding box of a black and white image. This bounding box is not exactly the size of the grid. However, if we assume that a tile is of a constant side length and the game is always aligned to the center of the screenshot, we can infer the number of columns and rows of the grid. If the tile side length is assumed to be <code>C</code>, then the width of the grid should be <code>columns x C</code> and the height <code>rows x C</code>. Thus inversely, the number of columns is <code>ceil(width of the bbox / C)</code> and the number of rows is <code>ceil(height of the bbox / C)</code>. Armed with this insigt we can define a function that takes as input a black and white image and returns the a 2D array of bounding boxes for each tile.</p>
+<p>Thanks to the black background we can find the bounding box of the game. <code>PIL</code> has a handy function <code>getbbox</code> that returns the bounding box of a black and white image. This bounding box is not exactly the size of the grid. However, if we assume that a tile is of a constant side length and the game is always aligned to the center of the screenshot, we can infer the number of columns and rows of the grid. If the tile side length is assumed to be <code>C</code>, then the width of the grid should be <code>columns x C</code> and the height <code>rows x C</code>. Thus inversely, the number of columns is <code>ceil(width of the bbox / C)</code> and the number of rows is <code>ceil(height of the bbox / C)</code>. Armed with this insight we can define a function that takes as input a black and white image and returns the a 2D array of bounding boxes for each tile.</p>
 
 </div>
 </div>
@@ -1960,8 +1960,8 @@ Degree :  1
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Pifalls-and-Future-Work">
-<a class="anchor" href="#Pifalls-and-Future-Work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pifalls and Future Work<a class="anchor-link" href="#Pifalls-and-Future-Work"> </a>
+<h1 id="Pitfalls-and-Future-Work">
+<a class="anchor" href="#Pitfalls-and-Future-Work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pitfalls and Future Work<a class="anchor-link" href="#Pitfalls-and-Future-Work"> </a>
 </h1>
 <p>We have a decent set of algorithms that solve infinite loop puzzles. However, the image processing heuristics that we settled on are not the best. Some common faliure cases are,</p>
 <ol>
