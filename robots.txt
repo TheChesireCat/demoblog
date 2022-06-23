@@ -1,1 +1,1 @@
-Sitemap: https://whoisankit.xyz/demoblog/sitemap.xml
+Sitemap: https://whoisankit.xyz/sitemap.xml
