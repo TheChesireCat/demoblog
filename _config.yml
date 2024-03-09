@@ -39,7 +39,8 @@ baseurl: "" # the subpath of your site, e.g. "/blog".
 # Github and twitter are optional:
 minima:
   social_links:
-    github: {platform : github, user_url : "https://github.com/TheChesireCat"}
+    - { platform: github,  user_url: "https://github.com/TheChesireCat" }
+    - { platform: twitter, user_url: "https://twitter.com/AnkitKaun" }
 
 # Set this to true to get LaTeX math equation support
 use_math: 
@@ -100,7 +101,7 @@ plugins:
 paginate: 15
 paginate_path: /page:num/
 
-remote_theme: jekyll/minima
+remote_theme: jekyll/minima@<296bf6b872b8450529bee1e48d0ca9be200a4be5
 
 titles_from_headings:
   enabled:     true
