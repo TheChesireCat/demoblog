@@ -37,10 +37,6 @@ url: "https://whoisankit.xyz" # the base hostname & protocol for your site, e.g.
 baseurl: "" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
-minima:
-  social_links:
-    - { platform: github,  user_url: "https://github.com/TheChesireCat" }
-    - { platform: twitter, user_url: "https://twitter.com/AnkitKaun" }
 
 # Set this to true to get LaTeX math equation support
 use_math: 
@@ -101,7 +97,7 @@ plugins:
 paginate: 15
 paginate_path: /page:num/
 
-remote_theme: jekyll/minima@<296bf6b872b8450529bee1e48d0ca9be200a4be5>
+remote_theme: jekyll/minima
 
 titles_from_headings:
   enabled:     true
