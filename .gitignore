@@ -1,17 +1,5 @@
-*.swp
-~*
-*~
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-*.xml
-vendor
-_notebooks/.ipynb_checkpoints
-# Local Netlify folder
-.netlify
-.tweet-cache
-__pycache__
-.vscode
-_notebooks/data/
+node_modules
+.next
+out
+.env*
 .DS_Store

@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "loop",
+    "title": "Solving \"Infinite Loop\" - Part 1",
+    "date": "2022-06-06",
+    "description": "In this episode of \"Ankit tries to set an ambitious goal and attempts to solve it incrementally over a decade\", we will be trying to make a bot that plays the android game \"Infinite Loop\"",
+    "categories": [
+      "algorithms"
+    ]
+  },
+  {
+    "slug": "rms-plot",
+    "title": "Visualizing Crime Incident Reports in Boston",
+    "date": "2022-07-17",
+    "description": "In this episode of \"Ankit tries to convince his flatmate that neighbourhoods in Boston are safer than they are made out to be.\", we'll look at some of the data that we've collected about crime incidents in Boston.",
+    "categories": [
+      "visualization"
+    ]
+  }
+]
