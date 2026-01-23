@@ -167,6 +167,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
+  color: var(--text);
 }
 
 .theme-icon svg {
