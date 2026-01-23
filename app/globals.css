@@ -556,6 +556,10 @@ main {
 .post-body table {
   width: 100%;
   border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 .post-body table th,
