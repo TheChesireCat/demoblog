@@ -33,6 +33,7 @@ export default function SiteHeader() {
   const [query, setQuery] = useState("");
   const [theme, setTheme] = useState("system");
   const [resolvedTheme, setResolvedTheme] = useState("light");
+  const [isAtTop, setIsAtTop] = useState(true);
   const isPostPage = pathname?.startsWith("/posts");
 
   useEffect(() => {
@@ -66,6 +67,15 @@ export default function SiteHeader() {
     }
   }, []);
 
+  useEffect(() => {
+    const update = () => {
+      setIsAtTop(window.scrollY <= 2);
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
+  }, []);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const trimmed = query.trim();
@@ -87,7 +97,11 @@ export default function SiteHeader() {
   };
 
   return (
-    <header className={`site-header${isPostPage ? " site-header--post" : ""}`}>
+    <header
+      className={`site-header${isPostPage ? " site-header--post" : ""}${
+        isAtTop ? "" : " site-header--hidden"
+      }`}
+    >
       <nav className="nav">
         <Link className="brand" href="/">
           Ankit Ramakrishnan
