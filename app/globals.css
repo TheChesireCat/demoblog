@@ -15,6 +15,9 @@
   --font-body: "Space Grotesk", "Trebuchet MS", sans-serif;
   --font-display: "Fraunces", "Georgia", serif;
   --header-text: #f5eadf;
+  --header-bg: rgba(19, 16, 12, 0.94);
+  --header-border: rgba(58, 49, 39, 0.7);
+  --header-surface: #1b1712;
 }
 
 * {
@@ -52,8 +55,8 @@ a:hover {
   top: 0;
   z-index: 10;
   backdrop-filter: blur(10px);
-  background: rgba(255, 248, 239, 0.94);
-  border-bottom: 1px solid rgba(229, 212, 196, 0.7);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
   color: var(--header-text);
   box-shadow: 0 12px 24px rgba(31, 27, 22, 0.08);
   transition: transform 0.25s ease, opacity 0.2s ease;
@@ -113,8 +116,8 @@ a:hover {
   display: flex;
   gap: 8px;
   align-items: center;
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: var(--header-surface);
+  border: 1px solid var(--header-border);
   padding: 6px 10px;
   border-radius: 999px;
 }
@@ -155,8 +158,8 @@ a:hover {
 }
 
 .theme-toggle {
-  border: 1px solid var(--border);
-  background: var(--card);
+  border: 1px solid var(--header-border);
+  background: var(--header-surface);
   color: var(--header-text);
   padding: 6px 10px;
   border-radius: 999px;
@@ -615,6 +618,9 @@ main {
     --border: #3a3127;
     --shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
     --header-text: #f5eadf;
+    --header-bg: rgba(19, 16, 12, 0.94);
+    --header-border: rgba(58, 49, 39, 0.7);
+    --header-surface: #1b1712;
   }
 
   body {
@@ -624,8 +630,8 @@ main {
   }
 
   .site-header {
-    background: rgba(19, 16, 12, 0.94);
-    border-bottom: 1px solid rgba(58, 49, 39, 0.7);
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--header-border);
   }
 
   .hero-card,
@@ -660,6 +666,9 @@ main {
   --border: #3a3127;
   --shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
   --header-text: #f5eadf;
+  --header-bg: rgba(19, 16, 12, 0.94);
+  --header-border: rgba(58, 49, 39, 0.7);
+  --header-surface: #1b1712;
 }
 
 :root[data-theme="dark"] body {
@@ -669,8 +678,8 @@ main {
 }
 
 :root[data-theme="dark"] .site-header {
-  background: rgba(19, 16, 12, 0.94);
-  border-bottom: 1px solid rgba(58, 49, 39, 0.7);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
 }
 
 :root[data-theme="dark"] .hero-card,
