@@ -19,17 +19,20 @@ export default function AboutPage() {
           </div>
         </div>
         <p>
-          I am a Computer Science graduate with interests in software and systems design,
-          automation, data analysis, computational social science, digital humanities, and art.
-          This blog is my living notebook for projects and ideas across those domains.
+          I recently started my PhD and am a first-year student at the Network Science Institute.
+          My interests span software system design, data analysis, computational social science,
+          digital humanities, and art. This blog is my living notebook for projects and ideas
+          across those domains. You can find my institute profile{' '}
+          <a href="https://www.networkscienceinstitute.org/people/ankit-ramakrishnan">here</a>.
         </p>
 
         <h3>Professional journey</h3>
         <p>
-          I recently completed an M.S. in Computer Science at Northeastern University (Khoury),
-          with coursework spanning NLP, algorithms, HCI, and programming languages. Before that,
-          I earned a B.Tech in Computer Science and Engineering from Vellore Institute of
-          Technology in India.
+          I am a Computer Science M.S. graduate from Northeastern University, with coursework
+          spanning NLP, algorithms, HCI, and programming languages. I am now pursuing my PhD at
+          the Network Science Institute, working under Dr. Matteo Chinazzi on large-scale location
+          data for epidemiological modeling and analysis. Before that, I earned a B.Tech in
+          Computer Science and Engineering from Vellore Institute of Technology in India.
         </p>
         <p>
           I have worked as a Teaching Assistant at Northeastern University, supporting courses in
