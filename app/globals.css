@@ -487,23 +487,21 @@ main {
   }
 
   .speech-bubble::before {
-    top: auto;
+    top: -20px;
     right: auto;
     left: 50%;
-    bottom: -20px;
     transform: translateX(-50%);
-    border-width: 20px 12px 0 12px;
-    border-color: var(--border) transparent transparent transparent;
+    border-width: 0 12px 20px 12px;
+    border-color: transparent transparent var(--border) transparent;
   }
 
   .speech-bubble::after {
-    top: auto;
+    top: -18px;
     right: auto;
     left: 50%;
-    bottom: -18px;
     transform: translateX(-50%);
-    border-width: 18px 11px 0 11px;
-    border-color: var(--card) transparent transparent transparent;
+    border-width: 0 11px 18px 11px;
+    border-color: transparent transparent var(--card) transparent;
   }
 }
 

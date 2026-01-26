@@ -28,11 +28,11 @@ export default function AboutPage() {
 
         <h3>Professional journey</h3>
         <p>
-          I am a Computer Science M.S. graduate from Northeastern University, with coursework
-          spanning NLP, algorithms, HCI, and programming languages. I am now pursuing my PhD at
-          the Network Science Institute, working under Dr. Matteo Chinazzi on large-scale location
-          data for epidemiological modeling and analysis. Before that, I earned a B.Tech in
-          Computer Science and Engineering from Vellore Institute of Technology in India.
+          I earned a B.Tech in Computer Science and Engineering from Vellore Institute of
+          Technology in India, then completed my Computer Science M.S. at Northeastern University
+          with coursework spanning NLP, algorithms, HCI, and programming languages. I am now
+          pursuing my PhD at the Network Science Institute, working under Dr. Matteo Chinazzi on
+          large-scale location data for epidemiological modeling and analysis.
         </p>
         <p>
           I have worked as a Teaching Assistant at Northeastern University, supporting courses in
