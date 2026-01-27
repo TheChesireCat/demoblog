@@ -28,7 +28,7 @@ gtag('config', '${gaId}');`}
           <SiteHeader />
           <main>{children}</main>
           <footer className="footer">
-            Built with Next.js and a lighter stack than the old fastpages setup.
+            Built with ❤️ and Next.js.
           </footer>
         </div>
       </body>
